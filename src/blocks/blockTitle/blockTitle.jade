@@ -1,0 +1,5 @@
+mixin blockTitle(data)
+    - var titleData = data ? data : {title: 'Here goes title'}
+
+    +b('div').blockTitle
+        +e('h3')!= titleData.title

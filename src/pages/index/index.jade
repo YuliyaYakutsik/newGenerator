@@ -1,0 +1,18 @@
+extends ../../jade/layout
+
+block head
+    - var pageDescription="Page List";
+    - var pageKeywords="Page List";
+    - var pageTitle="Page List";
+
+block content
+    include ../../blocks/pageList/pageList
+
+    +pageList ({
+        list: [
+            {
+                title: 'Landing page',
+                link: 'main.html'
+            }
+        ]
+    })

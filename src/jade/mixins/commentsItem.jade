@@ -1,0 +1,12 @@
+mixin commentsItem(data)
+    - var commentsItemData = data ? data : {title: 'Here goes title', list: []};
+
+    +e('li').comments__item
+        +e('div').comments__item__content
+            if commentsItemData.flowers
+                +e('div').comments__item__preview
+                    +e('img').comments__item__picture(src!= commentsItemData.flowerImage)
+            +e('div').comments__item__text!= commentsItemData.text
+        +e('div').comments__item__info
+            +e('span').comments__item__name!= commentsItemData.name
+            +e('span').comments__item__date!= commentsItemData.date

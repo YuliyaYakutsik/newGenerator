@@ -1,0 +1,78 @@
+extends ../../jade/layout
+
+block head
+    - var pageDescription="Generator";
+    - var pageKeywords="Generator";
+    - var pageTitle="Generator";
+
+block vars
+    - var landingPage = true;
+
+block content
+    include ../../blocks/steps/steps
+    include ../../blocks/modal/modal
+
+    +steps ({
+        title: 'How it works',
+        list: [
+            {
+                type: 'steps',
+                image: 'images/ico-step-1.svg',
+                title: 'Buy the place',
+                text: 'Buy place right now. <br> Price is valid until January 1, 2019.'
+            },
+            {
+                type: 'steps',
+                image: 'images/ico-step-2.svg',
+                title: 'Cell Selection',
+                text: 'Choose a place with an urn passing through in the halls'
+            },
+            {
+                type: 'steps',
+                image: 'images/ico-step-3.svg',
+                title: 'Transportation',
+                text: 'Send cremation remains in the post.'
+            },
+            {
+                type: 'steps',
+                image: 'images/ico-step-4.svg',
+                title: 'View it online',
+                text: 'You can now view a urn, write a condolence, present flowers.'
+            }
+        ]
+    })
+
+    +modal ({
+        id: 'askQuestion',
+        form: {
+            title: 'Ask a question',
+            inputs: [
+                {
+                    placeholder: 'Name',
+                    errorMessage: 'The name is required',
+                    type: 'text',
+                    name: 'name',
+                    id: 'name'
+                },
+                {
+                    placeholder: 'Email',
+                    errorMessage: 'The wrong email address',
+                    type: 'text',
+                    name: 'email',
+                    id: 'email'
+                }
+            ],
+            textAreas: [
+                {
+                    placeholder: 'Message',
+                    errorMessage: 'The message is required',
+                    name: 'message',
+                    id: 'message'
+                }
+            ],
+            buttonText: 'Ask'
+        }
+    })
+
+block scripts
+    script(src="/js/main.js")

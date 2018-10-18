@@ -1,0 +1,11 @@
+$blockTitle: '.blockTitle';
+
+#{$blockTitle} {
+    position: relative;
+    display: block;
+
+    h3 {
+        margin-bottom: .95em;
+        letter-spacing: .5px;
+    }
+}

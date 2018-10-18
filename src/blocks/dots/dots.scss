@@ -1,0 +1,32 @@
+$owl-dots: '.owl-dots';
+
+#{$owl-dots} {
+    text-align: center;
+    margin-bottom: 16px;
+
+    button.owl-dot {
+        background-color: rgba(#ecdccd, .6);
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        display: inline-block;
+        margin-left: 10px;
+        @include transition(all);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            background-color: rgba(map-get($colors, black), .4);
+        }
+
+        &.active {
+            background-color: rgba(map-get($colors, black), .6);
+
+            &:hover {
+                background-color: rgba(map-get($colors, black), .6);
+            }
+        }
+    }
+}

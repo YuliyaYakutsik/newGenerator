@@ -1,0 +1,30 @@
+block footer
+    include ../menu/menu
+
+    mixin footer(data)
+        - var footerData = data ? data : {};
+
+        +b('footer').footer
+            +e('div').wrapper
+                +e('div').content
+                    +e('div').content__left
+                        +e('div').preview
+                            +e('a').preview__link(href='main.html', class = (footerData.type === 'landing') ? 'mainPage' : '')
+                                +e('div').picture
+                                    +e('img').pic(src='images/ico-logo-ic-footer.svg', alt='logo')
+                    +e('div').content__center
+                        +e('div').copyright
+                            |Copyright 2018 - IColumbarium
+                        +e('div').terms
+                            +e('a').terms__link(href='termsAndServices.html', class='inverse')
+                                |Terms and services
+                    +e('div').content__right
+                        +e('ul').socials__list
+                            +e('li').socials__item
+                                +e('a').socials__link(href='#', target= '_blank')
+                                    +e('div').socials__picture
+                                        +e('img')(src='images/ico-facebook.svg')
+                            +e('li').socials__item
+                                +e('a').socials__link(href='#', target= '_blank')
+                                    +e('div').socials__picture
+                                        +e('img')(src='images/ico-twitter.svg')

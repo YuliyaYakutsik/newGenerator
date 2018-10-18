@@ -1,0 +1,99 @@
+$iconBlock: '.iconBlock';
+
+#{$iconBlock} {
+    list-style-type: none;
+    position: relative;
+
+    &__picture {
+        width: 146px;
+        height: 146px;
+        margin: 0 auto;
+        margin-bottom: 37px;
+
+        @include respond-to('huge') {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__description {
+        text-align: center;
+
+        @include respond-to('huge') {
+            width: 70%;
+            padding-left: 12px;
+            text-align: left;
+        }
+    }
+
+    &__title {
+        margin-bottom: 19px;
+        padding-left: 31px;
+        text-transform: uppercase;
+        font-family: $font-family-bold;
+        letter-spacing: 2px;
+        position: relative;
+        display: inline-block;
+
+        @include respond-to('huge') {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__counter-number {
+        font-family: $font-family-medium;
+        color: map-get($colors, brand);
+        font-size: map-get($font-size, extrasmall);
+        position: absolute;
+        padding: 0 0 0 2px;
+        left: 0;
+        top: -2px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid map-get($colors, brand);
+        border-radius: 100%;
+        text-align: center;
+    }
+
+    &__text {
+        color: rgba(map-get($colors, brand), .6);
+        font-size: map-get($font-size, small);
+        font-family: $font-family-medium;
+        line-height: map-get($line-height, larger);
+
+        @include respond-to('huge') {
+            padding-left: 31px;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        top: 87px;
+        left: -50px;
+        @include clearfix;
+
+        @include respond-to('huge') {
+            display: none;
+        }
+    }
+
+    &__dot {
+        float: left;
+        margin-right: 14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #ecdccd;
+
+        @include f-last(1) {
+            margin-right: 0;
+        }
+    }
+}

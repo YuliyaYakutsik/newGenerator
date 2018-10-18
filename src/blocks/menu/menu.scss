@@ -1,0 +1,114 @@
+$header: '.header';
+
+$menu: '.menu';
+
+#{$menu} {
+
+    &__list {
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+        margin-left: 60px;
+    }
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+        margin-left: 50px;
+        font-size: map-get($font-size, default);
+        font-family: $font-family-medium;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &#{$menu}__item_active {
+
+            #{$menu}__link {
+
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                #{$menu}__link {
+                    color: map-get($colors, brand);
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 1px 0;
+        position: relative;
+        color: map-get($colors, brand);
+
+        &:hover {
+            color: map-get($colors, black);
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: map-get($colors, black);
+            @include transition(all);
+        }
+    }
+}
+
+#{$header} {
+
+    #{$menu} {
+
+        @include respond-to('increased') {
+
+            #{$menu}__list {
+                margin-left: 0;
+            }
+
+            #{$menu}__item {
+                display: block;
+                margin-left: 0;
+                margin-bottom: 50px;
+                font-size: map-get($font-size, huge);
+                font-family: $font-family-regular;
+            }
+
+            #{$menu}__link {
+                color: map-get($colors, white);
+                display: inline;
+
+                &:hover {
+                    color: map-get($colors, white);
+
+                    &:after {
+                        width: 100%;
+                    }
+                }
+
+                &:after,
+                &:before {
+                    bottom: -4px;
+                    background-color: map-get($colors, white);
+                }
+            }
+        }
+
+        @include respond-to('medium') {
+
+            #{$menu}__item {
+                margin-bottom: 40px;
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+

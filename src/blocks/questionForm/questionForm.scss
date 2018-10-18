@@ -1,0 +1,109 @@
+$questionForm: '.questionForm';
+$form-message: '.form-message';
+
+#{$questionForm} {
+
+    &__title {
+        font-family: $font-family-regular;
+        font-size: map-get($font-size, prehuge);
+        margin-bottom: 50px;
+
+        @include respond-to('prebig') {
+            font-size: 1.2*map-get($font-size, large);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 40px;
+    }
+
+    &.show-message-success{
+
+        #{$questionForm}__content {
+            visibility: hidden;
+        }
+    }
+}
+
+#{$form-message} {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    visibility: visible;
+    opacity: 0;
+    padding: 55px;
+    text-align: center;
+    z-index: -1;
+    transition: opacity .3s ease .2s;
+
+    @include respond-to('prebig') {
+        top: 0;
+        transform: none;
+        padding: 55px 20px;
+        padding-top: 85px;
+    }
+
+    &__image {
+        display: inline-block;
+        margin-bottom: 23px;
+        width: 146px;
+
+        @include respond-to('prebig') {
+            width: 100px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+        font-size: 2*map-get($font-size, medium);
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, semilarge);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        margin-top: 75px;
+        @include transition(all);
+        padding: 17px 25px;
+        border-radius: 85px;
+        font-family: $font-family-bold;
+        letter-spacing: 1.5px;
+        color: map-get($colors, white);
+        text-align: center;
+        font-size: map-get($font-size, premedium);
+        text-transform: uppercase;
+        background: linear-gradient(#d7ab7b, rgba(228, 187, 130, 0.44) 16%, rgba(228, 187, 130, 0.17) 31%, rgba(173, 125, 77, 0.1) 53%, rgba(168, 120, 82, 0) 98%), linear-gradient(#d3a57a, #d3a57a);
+
+        @include respond-to('prebig') {
+            margin-top: 45px;
+        }
+
+        &:hover {
+            color: map-get($colors, white);
+            background: linear-gradient(#d3a57a, #d3a57a);
+        }
+
+        &:active {
+            color: map-get($colors, white);
+            background: linear-gradient(to right, rgba(203, 154, 102, 0.85), rgba(168, 120, 82, 0)), linear-gradient(#d3a57a, #d3a57a);
+        }
+    }
+
+    &#success-message {
+        padding: 55px 90px;
+
+        @include respond-to('prebig') {
+            padding: 85px 20px 55px;
+        }
+    }
+
+    &.show-message-success{
+        opacity: 1;
+        z-index: 1;
+    }
+}

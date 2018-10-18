@@ -1,0 +1,10 @@
+mixin memorialsItem(data)
+    - var memorialsItemData = data ? data : {title: 'Here goes title', list: []};
+
+    +e('li').item
+        +e('div').item__content
+            +e('div').item__preview
+                +e('img').item__image(src!= memorialsItemData.preview)
+            +e('div').item__name!= memorialsItemData.name
+            +e('div').item__surname!= memorialsItemData.surname
+            +e('div').item__date!= memorialsItemData.date

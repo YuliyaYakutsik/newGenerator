@@ -1,0 +1,50 @@
+block header
+    include ../menu/menu
+
+    mixin header(data)
+        - var headerData = data ? data : {};
+
+        +b('header').header
+            +e('div').wrapper
+                +e('div').content
+                    +e('div').preview
+                        +e('a').preview__link(href='main.html', class = (headerData.type === 'landing') ? 'mainPage' : '')
+                            +e('div').picture
+                                +e('img').pic(src='images/ico-logo-ic.svg', alt='logo')
+                    +e('div').menu
+                        +menu({
+                            type: headerData.type,
+                            list: [
+                                {
+                                    text: 'Search',
+                                    hash: 'search',
+                                    isActive: headerData.type==='landing' ? true : false
+                                },
+                                {
+                                    text: 'Gallery',
+                                    hash: 'gallery',
+                                    isActive: false
+                                },
+                                {
+                                    text: 'Purchase steps',
+                                    hash: 'steps',
+                                    isActive: false
+                                }
+                            ]
+                        })
+                    if headerData.type !== 'signedIn'
+                        +e('div').sign
+                            +e('a').sign__link(href='#')
+                                |Sign in
+                        +e('div').place
+                            +e('a').place__link(href='#', class='btn')
+                                |Get place for 199$
+                    if headerData.type === 'signedIn'
+                        +e('div').sign
+                            +e('a').sign__link(href='#')
+                                |Sign out
+                        +e('div').account
+                            |smirnova@gmail.com
+                    +e('div').burger-menu
+                        +e('a').burger-menu__link(href='#')
+                            +e('span').burger-menu__link-center

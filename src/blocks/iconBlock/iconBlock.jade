@@ -1,0 +1,18 @@
+mixin iconBlock(data, index)
+    - var iconBlockData = data ? data : [];
+    - var newIndex = index + 1
+
+    +e('li').item(class='iconBlock')
+        .iconBlock__picture
+            img.iconBlock__icon(src!= iconBlockData.image)
+        .iconBlock__description
+            h5.iconBlock__title!= iconBlockData.title
+                .iconBlock__counter-number!= newIndex
+            p.iconBlock__text!= iconBlockData.text
+        if (index != 0)
+            .iconBlock__dots
+                .iconBlock__dot
+                .iconBlock__dot
+                .iconBlock__dot
+                .iconBlock__dot
+                .iconBlock__dot

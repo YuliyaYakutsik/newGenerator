@@ -1,0 +1,15 @@
+block modal
+    include ../questionForm/questionForm
+
+    mixin modal(data)
+        - var modalData = data ? data : {};
+
+        +b('section').modal
+            +e('div').wrapper(id= data.id)
+                +e('div').content
+                    if modalData.form
+                        +questionForm(modalData.form)
+
+
+                    +e('div').close(class="modal_close")
+                        +e('img')(src="/images/ico-modal-close.svg")

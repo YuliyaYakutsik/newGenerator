@@ -1,0 +1,20 @@
+block pageList
+    include ../blockTitle/blockTitle
+
+    mixin pageList(data)
+        - var pageListData = data ? data : {};
+
+        - pageListData.list = pageListData.list ? pageListData.list : [];
+
+        +b('section').pageList
+            +e('div').wrapper
+                +e('div').header
+                    +blockTitle({
+                        title: 'List of pages'
+                    })
+
+                +e('div').content
+                    +e('ul').list
+                        each item in pageListData.list
+                            +e('li').item
+                                +e('a').link(href= item.link)!= item.title

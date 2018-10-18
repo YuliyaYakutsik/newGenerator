@@ -1,0 +1,221 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    font-weight: 400;
+    font-family: $font-family-regular;
+    font-size: map-get($font-size, default);
+    line-height: map-get($line-height, small);
+    color: map-get($colors, black);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+}
+
+p,
+img,
+iframe {
+    margin-bottom: 1.3em;
+}
+
+img,
+iframe {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    font-family: $font-family-regular;
+    color: map-get($colors, black);
+}
+
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: $font-family-bold;
+    color: map-get($colors, black);
+}
+
+h1 {
+    font-size: map-get($font-size, extrahuge);
+    line-height: 92px;
+
+    @include respond-to('increased') {
+        font-size: map-get($font-size, prehuge);
+        line-height: 72px;
+    }
+
+    @include respond-to('premedium') {
+        font-size: 1.2*map-get($font-size, large);
+        line-height: 54px;
+    }
+}
+
+h2 {
+    font-size: map-get($font-size, huge);
+    line-height: 84px;
+
+    @include respond-to('prebig') {
+        font-size: 1.2*map-get($font-size, large);
+        line-height: 54px;
+    }
+}
+
+h3 {
+    font-size: map-get($font-size, prehuge);
+    line-height: 67px;
+}
+
+h4 {
+    font-size: map-get($font-size, large);
+    line-height: 37px;
+}
+
+h5 {
+    font-size: map-get($font-size, premedium);
+    line-height: 22px;
+
+    @include respond-to('increased') {
+        font-size: map-get($font-size, default);
+    }
+}
+
+h6 {
+    font-size: map-get($font-size, small);
+    line-height: 18px;
+
+    @include respond-to('increased') {
+        font-size: 12.6px;
+    }
+
+    @include respond-to('prebig') {
+        font-size: map-get($font-size, extrasmall);
+    }
+}
+
+a {
+    color: map-get($colors, brand);
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover {
+        color: map-get($colors, black);
+        text-decoration: none;
+    }
+
+    &.inverse {
+        color: map-get($colors, black);
+
+        &:hover {
+            color: map-get($colors, brand);
+        }
+    }
+}
+
+ul, ol {
+    margin-bottom: 1.3em;
+    padding-left: map-get($font-size, default) * map-get($line-height, small);
+}
+
+ul li {
+    list-style: disc;
+    list-style-position: outside;
+}
+
+strong {
+    font-family: $font-family-bold;
+}
+
+input[type="submit"] {
+    @include transition(all);
+    cursor: pointer;
+    border-radius: 85px;
+    border: none;
+    font-family: $font-family-bold;
+    letter-spacing: 1.5px;
+    color: map-get($colors, white);
+    outline: none;
+    text-align: center;
+    font-size: map-get($font-size, premedium);
+    text-transform: uppercase;
+    background: linear-gradient(#d7ab7b, rgba(228, 187, 130, 0.44) 16%, rgba(228, 187, 130, 0.17) 31%, rgba(173, 125, 77, 0.1) 53%, rgba(168, 120, 82, 0) 98%), linear-gradient(#d3a57a, #d3a57a);
+
+    &:hover {
+        outline: none;
+        background: linear-gradient(#d3a57a, #d3a57a);
+    }
+
+    &:active {
+        outline: none;
+        background: linear-gradient(to right, rgba(203, 154, 102, 0.85), rgba(168, 120, 82, 0)), linear-gradient(#d3a57a, #d3a57a);
+    }
+}
+
+input[disabled] {
+    border-bottom-style: dotted;
+    pointer-events: none;
+    background: transparent;
+
+    +label,
+    +label+div+label {
+        pointer-events: none;
+    }
+}
+
+input[type="reset"] {
+    @include transition(all);
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    padding: 17px 25px;
+    font-family: $font-family-bold;
+    letter-spacing: 1.9px;
+    color: map-get($colors, brand);
+    outline: none;
+    text-align: center;
+    font-size: map-get($font-size, smaller);
+    text-transform: uppercase;
+    background: transparent;
+
+    &:hover {
+        outline: none;
+        background: transparent;
+        color: map-get($colors, black);
+    }
+
+    &:active {
+        outline: none;
+        background: transparent;
+        color: map-get($colors, black);
+    }
+}

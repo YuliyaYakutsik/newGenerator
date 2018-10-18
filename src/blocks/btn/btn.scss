@@ -1,0 +1,60 @@
+$btn: '.btn';
+
+#{$btn} {
+    background-image: linear-gradient(#d7ab7b, rgba(228, 187, 130, 0.44) 16%, rgba(228, 187, 130, 0.17) 31%, rgba(173, 125, 77, 0.1) 53%, rgba(168, 120, 82, 0.82)), linear-gradient(#d3a57a, #d3a57a);
+    text-transform: uppercase;
+    color: map-get($colors, white);
+    padding: 16px 32px;
+    border-radius: 100px;
+    display: inline-block;
+    font-family: $font-family-bold;
+    font-size: map-get($font-size, small);
+    letter-spacing: 2px;
+    @include transition(all);
+
+    @include respond-to('increased') {
+        letter-spacing: 1.5px;
+    }
+
+    &:hover {
+        color: map-get($colors, white);
+        background: linear-gradient(to left, #d7ab7b, rgba(228, 187, 130, 0.44) 16%, rgba(228, 187, 130, 0.17) 31%, rgba(173, 125, 77, 0.1) 53%, rgba(168, 120, 82, 0) 98%), linear-gradient(#d3a57a, #d3a57a);
+    }
+
+    &:active {
+        color: map-get($colors, white);
+        background: linear-gradient(to right, rgba(203, 154, 102, 0.85), rgba(168, 120, 82, 0)), linear-gradient(#d3a57a, #d3a57a);
+    }
+
+    &#{$btn}_big {
+        font-size: map-get($font-size, medium);
+        padding: 26px 52px;
+        letter-spacing: 1.7px;
+
+        @include respond-to('increased') {
+            font-size: map-get($font-size, premedium);
+            padding: 22px 40px;
+            letter-spacing: 1.5px;
+        }
+
+        @include respond-to('premedium') {
+            font-size: map-get($font-size, default);
+            padding: 18px 40px;
+            letter-spacing: 1.3px;
+        }
+    }
+
+    &#{$btn}_inner {
+        background: linear-gradient(#d7ab7b, rgba(228, 187, 130, 0.44) 16%, rgba(228, 187, 130, 0.17) 31%, rgba(173, 125, 77, 0.1) 53%, rgba(168, 120, 82, 0) 98%), linear-gradient(#d3a57a, #d3a57a);
+        padding: 11px 25px;
+        letter-spacing: 1.2px;
+
+        &:hover {
+            background: linear-gradient(#d3a57a, #d3a57a);
+        }
+
+        &:active {
+            background: linear-gradient(to right, rgba(203, 154, 102, 0.85), rgba(168, 120, 82, 0)), linear-gradient(#d3a57a, #d3a57a);
+        }
+    }
+}

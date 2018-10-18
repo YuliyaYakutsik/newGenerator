@@ -1,0 +1,75 @@
+include mixins/bemto
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+doctype html
+
+block vars
+    - var innerPage = false;
+    - var landingPage = false;
+    - var signedInPage = false;
+    - var viewHeightPage = false;
+
+html(lang="ru")
+
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+
+        block head
+        meta(name="Description" content=pageDescription || "")
+        meta(name="Keywords" content=pageKeywords || "")
+        title=pageTitle || ""
+
+        link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+
+        link(href='css/vendor.min.css' rel='stylesheet')
+        link(href='css/main.min.css' rel='stylesheet')
+
+        <!--[if lt IE 9]>
+        script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+        script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+        <![endif]-->
+    body
+
+        if landingPage
+            +header({
+                type: 'landing'
+            })
+
+        if !landingPage && !signedInPage
+            +header({
+                type: 'pages'
+            })
+
+        if !landingPage && signedInPage
+            +header({
+                type: 'signedIn'
+            })
+
+        +b('main').main(class=!landingPage ? 'main_background' : '', class=viewHeightPage ? 'main_flex' : '')
+
+            block content
+
+            +e('div').footer
+
+        if landingPage
+            +footer({
+                type: 'landing'
+            })
+
+        if !landingPage && !signedInPage
+            +footer({
+                type: 'pages'
+            })
+
+        if !landingPage && signedInPage
+            +footer({
+                type: 'signedIn'
+            })
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script(src='/js/library.dll.js')
+        script(src='/js/core.js')
+        block scripts

@@ -1,0 +1,26 @@
+block steps
+    include ../iconBlock/iconBlock
+
+    mixin steps(data)
+        - var stepsData = data ? data : {title: 'Here goes title', list: []};
+
+        +b('section').steps(data-section="steps")
+            +e('div').wrapper
+                +e('h2').title!= stepsData.title
+                +e('div').content
+                    +e('div').list__wrapper
+                        +e('ul').list
+                            each item, index in stepsData.list
+                                +iconBlock(item,  index)
+                        +e('a').controls__left(href='#', class='disabled')
+                            +e('img').controls__image(src='images/ico-control-left.svg')
+                        +e('a').controls__right(href='#')
+                            +e('img').controls__image(src='images/ico-control-right.svg')
+                    +e('div').place
+                        +e('a').place__link(href='#', class='btn')
+                            |Get place for 199$
+                        +e('p').place__text
+                            |Price is valid until September 1, 2018
+                    +e('div').review
+                        +e('a').review__link(href='#askQuestion', class='modal_trigger')
+                            |Leave a review or ask a question

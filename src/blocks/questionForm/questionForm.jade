@@ -1,0 +1,38 @@
+mixin questionForm(data)
+    - var questionData = data ? data : {title: 'Here goes title'};
+
+    +b('form').questionForm#question-form(method="POST", action='mail.php')
+        +e('div').content
+            +e('div').title!= questionData.title
+            +e('div').inputs
+
+                each item in questionData.inputs
+                    +e('div').input-block(class='form__input-block form__input-block_inputs')
+                        +e('input').input(name=`${item.name}`, type=`${item.type}`, id=`${item.id}`, class='form__element form__input')
+                        +e('label').placeholder(for=`${item.id}`, class='form__placeholder')!= item.placeholder
+                        +e('div').input-border(class='form__input-border')
+                        +e('label').errorTooltip(for=`${item.id}`, class='form__errorTooltip')!= item.errorMessage
+
+                each item in questionData.textAreas
+                    +e('div').input-block(class='form__input-block')
+                        +e('textarea').textarea(name=`${item.name}`, id=`${item.id}`, class='form__element form__textarea')
+                        +e('label').placeholder(for=`${item.id}`, class='form__placeholder')!= item.placeholder
+                        +e('div').input-border(class='form__input-border')
+                        +e('label').errorTooltip(for=`${item.id}`, class='form__errorTooltip')!= item.errorMessage
+
+            +e('input').button(name="", type="submit", value=`${questionData.buttonText}`, class='form__button')
+
+        +b('div').form-message#success-message
+            +e('div').content
+                +e('div').image
+                    +e('img').pic(src='images/ico-message-success.svg')
+                +e('div').text
+                    |Your message has been successfully sent
+        +b('div').form-message#error-message
+            +e('div').content
+                +e('div').image
+                    +e('img').pic(src='images/ico-message-error.svg')
+                +e('div').text
+                    |Sorry, your message wasn't sent
+                +e('a').link(href='#')
+                    |Try again

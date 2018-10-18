@@ -1,0 +1,37 @@
+$pageList: '.pageList';
+
+#{$pageList} {
+    @include blockDefault;
+    @include blockPaddingVertical;
+    @include blockPaddingHorizontal;
+
+    &__section,
+    &__list {
+        @include clearfix;
+    }
+
+    &__list,
+    &__item {
+        @include list-reset;
+    }
+
+    &__item {
+        counter-increment: item;
+        font-size: map-get($font-size, prelarge);
+
+        &:hover {
+            #{$pageList}__link:before {
+                color: map-get($colors, black);
+            }
+        }
+    }
+
+    &__link {
+        &:before {
+            content: counter(item) '. ';
+            font-size: map-get($font-size, prelarge);
+            color: map-get($colors, brand);
+            @include transition(color);
+        }
+    }
+}
