@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>FEEFA63D-351B-405D-8940-B3F679CA16B0@2x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 1 0 1 3777 0 3777"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="3777" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Landing-v.4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing---Mobile" transform="translate(-30.000000, -687.000000)">
+            <g id="Lines" opacity="0.100000001" transform="translate(30.000000, 0.000000)" stroke="#000000" stroke-dasharray="6,6" stroke-width="2">
+                <use id="Rectangle-2" mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+            <g id="App-icon" transform="translate(30.000000, 687.000000)" fill="#FF3747" fill-rule="nonzero">
+                <path d="M15.6875,2 C13.1172347,2 11,4.08093924 11,6.60714286 L11,40.3928571 C11,42.9190611 13.1172347,45 15.6875,45 L31.3125,45 C33.8827656,45 36,42.9190611 36,40.3928571 L36,6.60714286 C36,4.08093924 33.8827656,2 31.3125,2 L15.6875,2 Z M15.6875,5.07142857 L17.25,5.07142857 C17.25,6.76839286 18.6484375,8.14285714 20.375,8.14285714 L26.625,8.14285714 C28.3515625,8.14285714 29.75,6.76839286 29.75,5.07142857 L31.3125,5.07142857 C32.1953594,5.07142857 32.875,5.73941791 32.875,6.60714286 L32.875,40.3928571 C32.875,41.2605818 32.1953594,41.9285714 31.3125,41.9285714 L15.6875,41.9285714 C14.8046406,41.9285714 14.125,41.2605818 14.125,40.3928571 L14.125,6.60714286 C14.125,5.73941791 14.8046406,5.07142857 15.6875,5.07142857 Z M23.5,37.3214286 C22.6390625,37.3214286 21.9375,38.0109643 21.9375,38.8571429 C21.9375,39.7033214 22.6390625,40.3928571 23.5,40.3928571 C24.3609375,40.3928571 25.0625,39.7033214 25.0625,38.8571429 C25.0625,38.0109643 24.3609375,37.3214286 23.5,37.3214286 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

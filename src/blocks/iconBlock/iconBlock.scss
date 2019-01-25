@@ -37,7 +37,7 @@ $iconBlock: '.iconBlock';
         margin-bottom: 19px;
         padding-left: 31px;
         text-transform: uppercase;
-        font-family: $font-family-bold;
+        font-family: map-get($font-family, semibold);
         letter-spacing: 2px;
         position: relative;
         display: inline-block;
@@ -48,7 +48,7 @@ $iconBlock: '.iconBlock';
     }
 
     &__counter-number {
-        font-family: $font-family-medium;
+        font-family: map-get($font-family, semibold);
         color: map-get($colors, brand);
         font-size: map-get($font-size, extrasmall);
         position: absolute;
@@ -65,7 +65,7 @@ $iconBlock: '.iconBlock';
     &__text {
         color: rgba(map-get($colors, brand), .6);
         font-size: map-get($font-size, small);
-        font-family: $font-family-medium;
+        font-family: map-get($font-family, semibold);
         line-height: map-get($line-height, larger);
 
         @include respond-to('huge') {

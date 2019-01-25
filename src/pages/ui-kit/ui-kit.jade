@@ -1,0 +1,15 @@
+extends ../../jade/layout
+
+block vars
+    - var signedInPage = true;
+    - var hasMenu = false;
+
+block head
+    - var pageDescription="ui-kit";
+    - var pageKeywords="ui-kit";
+    - var pageTitle="ui-kit";
+
+block content
+    include ../../blocks/uikit/uikit
+
+    +uikit

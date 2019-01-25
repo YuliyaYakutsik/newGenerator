@@ -1,0 +1,4 @@
+mixin uikit-colors-list(list)
+    each color in list
+        +e('div').color(class="uikit__color_" + color.sassName)
+            +e('span')!= color.name + ' (SASS name: ' + color.sassName + ')'

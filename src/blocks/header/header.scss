@@ -81,7 +81,7 @@ $header: '.header';
     }
 
     &__sign {
-        font-family: $font-family-bold;
+        font-family: map-get($font-family, semibold);
         margin-left: auto;
 
         @include respond-to('prebig') {
@@ -102,7 +102,7 @@ $header: '.header';
     }
 
     &__account {
-        font-family: $font-family-bold;
+        font-family: map-get($font-family, semibold);
         font-size: map-get($font-size, small);
         letter-spacing: 2px;
         text-transform: uppercase;

@@ -7,7 +7,7 @@ $btn: '.btn';
     padding: 16px 32px;
     border-radius: 100px;
     display: inline-block;
-    font-family: $font-family-bold;
+    font-family: map-get($font-family, semibold);
     font-size: map-get($font-size, small);
     letter-spacing: 2px;
     @include transition(all);
@@ -37,7 +37,7 @@ $btn: '.btn';
             letter-spacing: 1.5px;
         }
 
-        @include respond-to('premedium') {
+        @include respond-to('prebig') {
             font-size: map-get($font-size, default);
             padding: 18px 40px;
             letter-spacing: 1.3px;

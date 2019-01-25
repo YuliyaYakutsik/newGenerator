@@ -1,0 +1,159 @@
+$uikit: '.uikit';
+
+#{$uikit} {
+    @include blockDefault;
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical;
+    counter-reset: section-counter;
+
+    &__title {
+        h1 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__section {
+        position: relative;
+        margin-bottom: 60px;
+        counter-increment: section-counter;
+        counter-reset: group-counter;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__section__title {
+        h2 {
+            margin-bottom: 30px;
+
+            &:before {
+                content: counter(section-counter)'. ';
+                color: map-get($colors, brand);
+            }
+        }
+    }
+
+    &__group {
+        margin-bottom: 40px;
+        padding-left: 30px;
+        counter-increment: group-counter;
+        counter-reset: item-counter;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+
+        @include respond-to('prebig') {
+            padding-left: 0;
+        }
+    }
+
+    &__group__title {
+        h3 {
+            margin-bottom: 20px;
+
+            &:before {
+                content: counter(section-counter) '.' counter(group-counter) '. ';
+                color: map-get($colors, brand);
+            }
+        }
+    }
+
+    &__group__content {
+        @include clearfix;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        padding-left: 30px;
+        counter-increment: item-counter;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+
+        @include respond-to('prebig') {
+            padding-left: 0;
+        }
+    }
+
+    &__item__title {
+        h4 {
+            margin-bottom: .6em;
+
+            &:before {
+                content: counter(section-counter) '.' counter(group-counter) '.' counter(item-counter) '. ';
+                color: map-get($colors, brand);
+            }
+        }
+    }
+
+    &__item__content {
+        &#{$uikit}__item__content_type_coloured {
+            background-color: map-get($colors, brand);
+            padding: 10px 15px;
+        }
+    }
+
+    &__color {
+        @include gallery(2);
+        margin-bottom: 30px;
+        text-align: center;
+
+        @include respond-to('prebig') {
+            @include gallery(4);
+        }
+
+        &:before {
+            content: '';
+            position: relative;
+            display: block;
+            width: 100px;
+            height: 150px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 0 rgba(map-get($colors, black), .2);
+
+            @include respond-to('prebig') {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        span {
+            font-size: map-get($font-size, small);
+        }
+
+        &#{$uikit}__color_brand {
+            &:before {
+                background-color: map-get($colors, brand);
+            }
+        }
+
+        &#{$uikit}__color_black {
+            &:before {
+                background-color: map-get($colors, black);
+            }
+        }
+
+        &#{$uikit}__color_white {
+            &:before {
+                background-color: map-get($colors, white);
+            }
+        }
+
+        &#{$uikit}__color_grey {
+            &:before {
+                background-color: map-get($colors, grey);
+            }
+        }
+
+        &#{$uikit}__color_silver {
+            &:before {
+                background-color: map-get($colors, silver);
+            }
+        }
+    }
+}

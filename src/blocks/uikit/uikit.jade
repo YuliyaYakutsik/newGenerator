@@ -1,0 +1,157 @@
+block uikit
+    include ../../jade/mixins/uikit-colors-list
+
+    mixin uikit
+        +b('div').uikit
+            +e('div').wrapper
+                +e('div').header
+                    +e('div').title
+                        +e('h1')!= "Project ui-kit"
+
+                +e('div').content
+                    +e('div').section
+                        +e('div').section__title
+                            +e('h2')!= "Colors"
+
+                        +e('div').group
+                            +e('div').group__title
+                                +e('h3')!= "Basic colors"
+
+                            +e('div').group__content
+                                +uikit-colors-list([
+                                    {
+                                        name: 'Brand',
+                                        sassName: 'brand'
+                                    },
+                                    {
+                                        name: 'Black',
+                                        sassName: 'black'
+                                    },
+                                    {
+                                        name: 'White',
+                                        sassName: 'white'
+                                    }
+                                ])
+
+                        +e('div').group
+                            +e('div').group__title
+                                +e('h3')!= "Secondary colors"
+
+                            +e('div').group__content
+                                +uikit-colors-list([
+                                    {
+                                        name: 'Grey',
+                                        sassName: 'grey'
+                                    },
+                                    {
+                                        name: 'Silver',
+                                        sassName: 'silver'
+                                    }
+                                ])
+
+                    +e('div').section
+                        +e('div').section__title
+                            +e('h2')!= "Typography"
+
+                        +e('div').group
+                            +e('div').group__title
+                                +e('h3')!= "Headings"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "H1 - H6"
+
+                                +e('div').item__content
+                                    +e('h1')!= "Heading 1"
+
+                                    +e('h2')!= "Heading 2"
+
+                                    +e('h3')!= "Heading 3"
+
+                                    +e('h4')!= "Heading 4"
+
+                                    +e('h5')!= "Heading 5"
+
+                                    +e('h6')!= "Heading 6"
+
+                        +e('div').group
+                            +e('div').group__title
+                                +e('h3')!= "Body Text"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Default"
+
+                                +e('div').item__content
+                                    +e('p')!= "Lorem ipsum dolor sit amet, eu mei elit mandamus eloquentiam, ut mei amet dicam omnesque. Sanctus platonem id nec, ei vocent gloriatur cum. An falli mucius cum."
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Bold"
+
+                                +e('div').item__content
+                                    +e('p')!= "<strong>Lorem ipsum dolor sit amet, eu mei elit mandamus eloquentiam, ut mei amet dicam omnesque. Sanctus platonem id nec, ei vocent gloriatur cum. An falli mucius cum.</strong>"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Italic"
+
+                                +e('div').item__content
+                                    +e('p')!= "<i>Lorem ipsum dolor sit amet, eu mei elit mandamus eloquentiam, ut mei amet dicam omnesque. Sanctus platonem id nec, ei vocent gloriatur cum. An falli mucius cum.</i>"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "UL"
+
+                                +e('div').item__content
+                                    +e('ul')
+                                        +e('li')!= "Item 1"
+
+                                        +e('li')!= "Item 2"
+
+                                        +e('li')!= "Item 3"
+
+                                        +e('li')!= "Item 4"
+
+                                        +e('li')!= "Item 5"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "OL"
+
+                                +e('div').item__content
+                                    +e('ol')
+                                        +e('li')!= "Item 1"
+
+                                        +e('li')!= "Item 2"
+
+                                        +e('li')!= "Item 3"
+
+                                        +e('li')!= "Item 4"
+
+                                        +e('li')!= "Item 5"
+
+                        +e('div').group
+                            +e('div').group__title
+                                +e('h3')!= "Hyperlinks"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Ordinary hyperlink"
+
+                                +e('div').item__content
+                                    +e('a')(href="#")!= "Ordinary hyperlink"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Coloured hyperlink"
+
+                                +e('div').item__content
+                                    a(href="#", class="coloured")!= "Coloured hyperlink"
+
+                            +e('div').item
+                                +e('div').item__title
+                                    +e('h4')!= "Inverse hyperlink"
+
+                                +e('div').item__content
+                                    a(href="#", class="inverse")!= "Inverse hyperlink"

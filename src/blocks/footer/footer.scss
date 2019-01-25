@@ -35,7 +35,7 @@ $footer: '.footer';
 
     &__content__center {
         line-height: 34px;
-        font-family: $font-family-medium;
+        font-family: map-get($font-family, semibold);
         font-size: map-get($font-size, small);
         color: map-get($colors, brand);
         display: flex;

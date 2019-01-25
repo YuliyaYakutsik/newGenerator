@@ -1,8 +1,8 @@
 // Font-family
-$font-family-regular: 'playfair_regular', Arial, Helvetica, sans-serif;
-$font-family-regular-2: 'montserrat_regular', Arial, Helvetica, sans-serif;
-$font-family-medium: 'montserrat_medium', Arial, Helvetica, sans-serif;
-$font-family-bold: 'montserrat_bold', Arial, Helvetica, sans-serif;
+$font-family: (
+    regular: #{'opensans_regular', Helvetica, Arial, sans-serif},
+    semibold: #{'opensans_semibold', Helvetica, Arial, sans-serif}
+);
 
 // Font-size
 $font-size: (
@@ -41,36 +41,12 @@ $line-height: (
 
 // Color
 $colors: (
-    brand: #0066FF,
-    midnight: #001433,
-    error: #F45C58,
-    information: #FFF2CA,
-    success: #3CDFB0,
-    cta: #FFAA40,
+    brand: #FF3747,
 
-    link-water: #DEEEF5,
-    catskill-white: #F1F5F8,
+    black: #333333,
     white: #FFFFFF,
-    alabaster: #F9F9F9,
-    alabaster-light: #FCFCFC,
-    seashell: #F1F1F1,
-    gallery: #EDEDED,
-    mercury: #E5E7EA,
-    mercury-dark: #E6E6E6,
-    alto: #D9D9D9,
-    silver: #CCD0D6,
-    silver-chalice: #A7A7A7,
-    dove-gray: #737373,
-    emperor: #505050,
-    tundora: #404040,
-    mine-shaft: #272727,
-    black: #000000,
-    loblolly: #B6BEC6,
-    lightgray: #FAFAFB,
-    light-midnight: #192b47,
-    gray-midnight: #4c5a70,
-    battleship-grey: #667285,
-    dusty-gray: #999999
+    silver: #9A9C9F,
+    grey: #5A6779
 );
 
 // Global
@@ -78,17 +54,12 @@ $minWidth: 320px;
 
 // Breakpoints
 $breakpoints: (
-    'presmall' : (max-width: 374px),
-    'beforesmall' : (max-width: 400px),
     'small' : (max-width: 480px),
     'ultrasmall' : (max-width: 550px),
     'medium': (max-width: 640px),
-    'premedium': (max-width: 668px),
     'prebig': (max-width: 767px),
-    'big': (max-width: 800px),
     'intermediary': (max-width: 960px),
     'increased': (max-width: 1024px),
-    'preincreased': (max-width: 1040px),
     'huge': (max-width: 1260px),
     'ultrahuge': (max-width: 1400px),
     'premonsterhuge': (max-width: 1717px),
@@ -98,7 +69,7 @@ $breakpoints: (
 // Grid
 $susy: (
     columns: 12,
-    container: 1096px,
+    container: 1240px,
     gutters: 1/4,
     global-box-sizing: border-box
 );

@@ -39,20 +39,20 @@
     padding-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: $font-family-regular;
+    font-family: map-get($font-family, regular);
     font-size: map-get($font-size, predefault);
     line-height: 40px;
     appearance: none;
     border: none;
     outline: none;
-    color: rgba(map-get($colors, midnight), .8);
+    color: rgba(map-get($colors, black), .8);
     border-radius: 0;
     background-color: map-get($colors, white);
     border: 1px solid map-get($colors, brand);
     @include transition(all);
 
     &:focus {
-        border-color: map-get($colors, midnight);
+        border-color: map-get($colors, black);
     }
 }
 
@@ -66,21 +66,21 @@
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: $font-family-regular;
+    font-family: map-get($font-family, regular);
     font-size: map-get($font-size, predefault);
     line-height: map-get($line-height, little);
     appearance: none;
     border: none;
     outline: none;
     resize: none;
-    color: rgba(map-get($colors, midnight), .8);
+    color: rgba(map-get($colors, black), .8);
     border-radius: 0;
     background-color: map-get($colors, white);
     border: 1px solid map-get($colors, brand);
     @include transition(all);
 
     &:focus {
-        border-color: map-get($colors, midnight);
+        border-color: map-get($colors, black);
     }
 }
 

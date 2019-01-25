@@ -1,57 +1,28 @@
-/* montserrat */
-$fonts_dir_montserrat: '../fonts/montserrat';
-
-/* playfair */
-$fonts_dir_playfair: '../fonts/playfair';
-
-/* regular2 */
-@font-face {
-    font-family: 'montserrat_regular';
-    src: url('#{$fonts_dir_montserrat}/regular/montserrat-regular.eot');
-    src: url('#{$fonts_dir_montserrat}/regular/montserrat-regular.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts_dir_montserrat}/regular/montserrat-regular.svg#latoblack') format('svg'),
-    url('#{$fonts_dir_montserrat}/regular/montserrat-regular.woff') format('woff'),
-    url('#{$fonts_dir_montserrat}/regular/montserrat-regular.woff2') format('woff2'),
-    url('#{$fonts_dir_montserrat}/regular/montserrat-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* medium */
-@font-face {
-    font-family: 'montserrat_medium';
-    src: url('#{$fonts_dir_montserrat}/medium/montserrat-medium.eot');
-    src: url('#{$fonts_dir_montserrat}/medium/montserrat-medium.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts_dir_montserrat}/medium/montserrat-medium.svg#latoblack') format('svg'),
-    url('#{$fonts_dir_montserrat}/medium/montserrat-medium.woff') format('woff'),
-    url('#{$fonts_dir_montserrat}/medium/montserrat-medium.woff2') format('woff2'),
-    url('#{$fonts_dir_montserrat}/medium/montserrat-medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* bold */
-@font-face {
-    font-family: 'montserrat_bold';
-    src: url('#{$fonts_dir_montserrat}/bold/montserrat-bold.eot');
-    src: url('#{$fonts_dir_montserrat}/bold/montserrat-bold.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts_dir_montserrat}/bold/montserrat-bold.svg#latobold') format('svg'),
-    url('#{$fonts_dir_montserrat}/bold/montserrat-bold.woff') format('woff'),
-    url('#{$fonts_dir_montserrat}/bold/montserrat-bold.woff2') format('woff2'),
-    url('#{$fonts_dir_montserrat}/bold/montserrat-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* opensans */
+$fonts_dir_opensans: '../fonts/opensans';
 
 /* regular */
 @font-face {
-    font-family: 'playfair_regular';
-    src: url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.eot');
-    src: url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.eot?#iefix') format('embedded-opentype'),
-    url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.svg#latoregular') format('svg'),
-    url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.woff') format('woff'),
-    url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.woff2') format('woff2'),
-    url('#{$fonts_dir_playfair}/regular/playfairdisplay-regular.ttf') format('truetype');
+    font-family: 'opensans_regular';
+    src: url('#{$fonts_dir_opensans}/regular/opensans-regular.eot');
+    src: url('#{$fonts_dir_opensans}/regular/opensans-regular.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts_dir_opensans}/regular/opensans-regular.svg#latoblack') format('svg'),
+    url('#{$fonts_dir_opensans}/regular/opensans-regular.woff') format('woff'),
+    url('#{$fonts_dir_opensans}/regular/opensans-regular.woff2') format('woff2'),
+    url('#{$fonts_dir_opensans}/regular/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* semibold */
+@font-face {
+    font-family: 'opensans_semibold';
+    src: url('#{$fonts_dir_opensans}/semibold/opensans-semibold.eot');
+    src: url('#{$fonts_dir_opensans}/semibold/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts_dir_opensans}/semibold/opensans-semibold.svg#latoblack') format('svg'),
+    url('#{$fonts_dir_opensans}/semibold/opensans-semibold.woff') format('woff'),
+    url('#{$fonts_dir_opensans}/semibold/opensans-semibold.woff2') format('woff2'),
+    url('#{$fonts_dir_opensans}/semibold/opensans-semibold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

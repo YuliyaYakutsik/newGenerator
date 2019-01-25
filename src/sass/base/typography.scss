@@ -21,7 +21,7 @@ time, mark, audio, video {
 
 body {
     font-weight: 400;
-    font-family: $font-family-regular;
+    font-family: map-get($font-family, regular);
     font-size: map-get($font-size, default);
     line-height: map-get($line-height, small);
     color: map-get($colors, black);
@@ -54,7 +54,7 @@ h1,
 h2,
 h3 {
     font-weight: normal;
-    font-family: $font-family-regular;
+    font-family: map-get($font-family, regular);
     color: map-get($colors, black);
 }
 
@@ -62,7 +62,7 @@ h4,
 h5,
 h6 {
     font-weight: normal;
-    font-family: $font-family-bold;
+    font-family: map-get($font-family, semibold);
     color: map-get($colors, black);
 }
 
@@ -75,7 +75,7 @@ h1 {
         line-height: 72px;
     }
 
-    @include respond-to('premedium') {
+    @include respond-to('prebig') {
         font-size: 1.2*map-get($font-size, large);
         line-height: 54px;
     }
@@ -102,7 +102,7 @@ h4 {
 }
 
 h5 {
-    font-size: map-get($font-size, premedium);
+    font-size: map-get($font-size, prebig);
     line-height: 22px;
 
     @include respond-to('increased') {
@@ -153,7 +153,7 @@ ul li {
 }
 
 strong {
-    font-family: $font-family-bold;
+    font-family: map-get($font-family, semibold);
 }
 
 input[type="submit"] {
@@ -161,7 +161,7 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 85px;
     border: none;
-    font-family: $font-family-bold;
+    font-family: map-get($font-family, semibold);
     letter-spacing: 1.5px;
     color: map-get($colors, white);
     outline: none;
@@ -198,7 +198,7 @@ input[type="reset"] {
     display: inline-block;
     border: none;
     padding: 17px 25px;
-    font-family: $font-family-bold;
+    font-family: map-get($font-family, semibold);
     letter-spacing: 1.9px;
     color: map-get($colors, brand);
     outline: none;

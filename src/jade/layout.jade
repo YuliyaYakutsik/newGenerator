@@ -1,4 +1,5 @@
 include mixins/bemto
+include mixins/favicon
 include ../blocks/header/header
 include ../blocks/footer/footer
 
@@ -22,7 +23,7 @@ html(lang="ru")
         meta(name="Keywords" content=pageKeywords || "")
         title=pageTitle || ""
 
-        link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+        +favicon
 
         link(href='css/vendor.min.css' rel='stylesheet')
         link(href='css/main.min.css' rel='stylesheet')

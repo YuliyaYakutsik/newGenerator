@@ -4,7 +4,7 @@ $form-message: '.form-message';
 #{$questionForm} {
 
     &__title {
-        font-family: $font-family-regular;
+        font-family: map-get($font-family, regular);
         font-size: map-get($font-size, prehuge);
         margin-bottom: 50px;
 
@@ -71,7 +71,7 @@ $form-message: '.form-message';
         @include transition(all);
         padding: 17px 25px;
         border-radius: 85px;
-        font-family: $font-family-bold;
+        font-family: map-get($font-family, semibold);
         letter-spacing: 1.5px;
         color: map-get($colors, white);
         text-align: center;

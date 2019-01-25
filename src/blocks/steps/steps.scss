@@ -171,7 +171,7 @@ $steps: '.steps';
     }
 
     &__place__text {
-        font-family: $font-family-regular-2;
+        font-family: map-get($font-family, regular);
         margin-bottom: 0;
         color: rgba(#323748, .7);
 
@@ -185,7 +185,7 @@ $steps: '.steps';
     }
 
     &__review {
-        font-family: $font-family-bold;
+        font-family: map-get($font-family, semibold);
         font-size: map-get($font-size, small);
         text-transform: uppercase;
         letter-spacing: 2px;
