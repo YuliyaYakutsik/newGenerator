@@ -6,6 +6,9 @@ export default {
         styles: './src/sass',
         scripts: './src/js',
         images: './src/images',
+        sprite: {
+            core: './src/images/sprite/core'
+        },
         fonts: './src/fonts',
         blocks: './src/blocks'
     },

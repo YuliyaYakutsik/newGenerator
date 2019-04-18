@@ -1,10 +1,9 @@
 {
-    "name": "Generator",
+    "name": "anbudstorget-html",
     "version": "0.1.0",
-    "description": "Generator",
+    "description": "anbudstorget html",
     "keywords": [
-        "Generator",
-        "landing",
+        "Anbudstorget",
         "html"
     ],
     "scripts": {
@@ -19,7 +18,7 @@
         "build:library": "webpack --config library.webpack.config.js",
         "clean": "rm -rf ./static"
     },
-    "homepage": "https://lab.aretodev.com/html/icolumbarium.com",
+    "homepage": "https://lab.aretodev.com/html/anbudstorget",
     "author": {
         "name": "Areto Development",
         "email": "info@aretodev.com",
@@ -61,6 +60,7 @@
         "gulp-sass-glob": "^1.0.5",
         "gulp-sftp": "^0.1.4",
         "gulp-sourcemaps": "^1.6.0",
+        "gulp-svg-sprites": "^4.1.2",
         "gulp-uglify": "^1.2.0",
         "gulp-util": "^3.0.6",
         "gulp-watch": "^4.3.5",
